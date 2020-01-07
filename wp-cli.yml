@@ -1,0 +1,4 @@
+require:
+  - wp-cli/browse-command.php
+@php.tutorial:
+  ssh: vagrant:php.tutorial:/var/www/html
