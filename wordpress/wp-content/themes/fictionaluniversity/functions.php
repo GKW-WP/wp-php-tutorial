@@ -12,6 +12,19 @@
 		register_nav_menu('footerlocal2', 'Footer Location 2');
 		add_theme_support( 'title-tag');
 	}
+
+	function university_post_types() {
+		register_post_type('event', array(
+			'public' => true,
+			'labels' => array(
+				'name' => 'Events'
+			),
+			'menu_icon' => 'dashicons-calendar'
+		));
+
+	}
+
 	add_action('wp_enqueue_scripts','university_files');
 	add_action('after_setup_theme', 'university_features');
+	add_action('init', 'university_post_types');
 ?>
